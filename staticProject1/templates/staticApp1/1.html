@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static View</title>
+    <link rel="stylesheet" href="{% static "css/style.css"%}">
+</head>
+<body bgcolor="#1c2b2d">
+    <center><h1><u>{{name}}'s Favourite's</u></h1></center>
+    <div>
+        <h2>Player:{{player}}</h2>
+        <h3><a href="https://en.wikipedia.org/wiki/Sachin_Tendulkar">Click Here</a></h3>
+        <img src="{%static "images/sachin-tendulkar.jpg"%}" />
+    </div>
+    <br>
+    <div>
+        <h2>Animal:{{animal}}</h2>
+        <h3><a href="https://en.wikipedia.org/wiki/Tiger">Click Here</a></h3>
+        <img src="{%static "images/tiger.jpg"%}" />
+    </div>
+    <br>
+    <div>
+        <h2>Subject:{{subject}}</h2>
+        <h3><a href="https://en.wikipedia.org/wiki/Python_(programming_language)">Click Here</a></h3>
+        <img src="{%static "images/python.jpg"%}" />
+    </div>
+</body>
+</html> 
