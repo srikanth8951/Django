@@ -12,5 +12,5 @@ def view1(request):
             place = f.cleaned_data['place']
             d = {'name1':name, 'roll1':roll, 'marks1':marks,'place1':place}
         return render(request, 'myApp/output.html',d)
-    d={'form':f}
+    d={'form':f}    
     return render(request, 'myApp/input.html',d)
