@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FBV</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body style="background-color:#e8e8e8;">
+    <div calss="container" align="center">
+        <h1 style="color:#0278ae"><b>Employee Details</b></h1>
+        <table border="2">
+            <tr style="color:#006a71">
+                <th><b><h2>Number</h2></b></th>
+                <th><b><h2>Name</h2></b></th>
+                <th><b><h2>Salary</h2></b></th>
+                <th><b><h2>Address</h2></b></th>
+                <th><b><h2>Update</h2></b></th>
+                <th><b><h2>Delete</h2></b></th>
+            </tr>
+            {% for x in emp %}
+            <tr>
+                <td><b>{{x.eno}}</b></td>
+                <td><b>{{x.ename}}</b></td>
+                <td><b>{{x.esal}}</b></td>
+                <td><b>{{x.eaddr}}</b></td>
+                <td> <a href="/update/{{x.id}}" class="btn btn-lg btn-warning">Update</a> </td>
+                <td><a href="/delete/{{x.id}}" class="btn btn-lg btn-danger">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br>
+        <a href="/insert" class="btn btn-lg btn-primary">Do you want to insert a new record</a>
+    </div>
+
+</body>
+
+</html>
