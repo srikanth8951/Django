@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FBV</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Homepage</title>
 </head>
+{% extends 'myApp/parent.html'%}
 
 <body style="background-color:#e8e8e8;">
-    <div calss="container" align="center">
+    {% block for_child %}
         <h1 style="color:#0278ae"><b>Employee Details</b></h1>
         <table border="2">
             <tr style="color:#006a71">
@@ -34,8 +30,7 @@
         </table>
         <br>
         <a href="/insert" class="btn btn-lg btn-primary">Do you want to insert a new record</a>
-    </div>
-
+        {% endblock %}
 </body>
 
 </html>
