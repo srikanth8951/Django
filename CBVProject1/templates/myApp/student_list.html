@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Student List</title>
+</head>
+{% extends 'myApp/parent.html'%}
+
+<body>
+    {% block for_child %}
+    <h1>List of Students</h1>
+    {% for x in student_list %}
+    <a href="/{{x.id}}">{{x.name}}'s Details</a><br><br>
+    {% endfor %}
+    <a href="/create" class="btn btn-primary">Creat New Record</a>
+    {% endblock %}
+</body>
+
+</html>
