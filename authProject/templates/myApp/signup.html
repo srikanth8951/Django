@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SignUp</title>
+</head>
+{% extends 'myApp/parent.html' %}
+
+<body>
+    <h1 style="color: red;">SignUp Form</h1>
+    {% block for_child %}
+        <div class="container" align="center">
+            <form  method="post">
+                {{form.as_p}}
+                {% csrf_token %}
+                <input type="submit" value="signup" class="btn btn-lg btn-primary">
+            </form>
+        </div>
+    {% endblock %}
+</body>
+
+</html>
