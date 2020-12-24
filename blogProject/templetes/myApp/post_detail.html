@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'myApp/parent.html' %}
+{% block title_block %}
+{{post.title}}
+{% endblock %}
+<body style="background-color: #1b262c;">
+    {% block content_block %}
+    <p style="padding-top: 30px;">Published on {{post.publish}} by {{post.author|title}}</p>
+    {{post.body|linebreaks}}
+    {% endblock %}
+</body>
+
+</html>
