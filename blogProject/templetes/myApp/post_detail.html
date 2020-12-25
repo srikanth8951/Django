@@ -7,8 +7,9 @@
 <body style="background-color: #1b262c;">
     {% block content_block %}
     <p style="padding-top: 30px;">Published on {{post.publish}} by {{post.author|title}}</p>
-    {{post.body|linebreaks}}
+    {{post.body|linebreaks}} <br><br>
+    <a href="/{{post.id}}/share" class="btn btn-lg btn-primary">POST BY MAIL</a>
     {% endblock %}
 </body>
 
-</html>
+</html> 

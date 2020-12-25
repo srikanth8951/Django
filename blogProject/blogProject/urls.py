@@ -20,5 +20,6 @@ from myApp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.post_list_view),
-    re_path(r'(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<post>[-\w]+)/$', views.post_detail_view,name='post_detail')
+    re_path(r'(?P<year>\d{4})/(?P<month>\d{2})/(?P<day>\d{2})/(?P<post>[-\w]+)/$', views.post_detail_view,name='post_detail'),
+    re_path(r'^(?P<id>\d+)/share',views.mail_send_view) 
 ]

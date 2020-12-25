@@ -10,7 +10,7 @@ Home page
     {% for post in post_list %}
     <a href="{{post.get_absolute_url}}"  style="color:  #ebecf1;"><h2> {{post.title}} </h2></a>
     Published on {{post.publish}} by {{post.author|title}}
-    {{post.body|truncatewords:30|linebreaks}}
+    {{post.body|truncatewords:40|linebreaks}}
     {% endfor %}
     {% include 'myApp/pagination.html' with page=post_list %}
     {% endblock %}
