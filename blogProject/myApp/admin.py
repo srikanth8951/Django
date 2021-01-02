@@ -8,4 +8,5 @@ class PostAdmin(admin.ModelAdmin):
     search_fields=['title','body']
     raw_id_fields=('author',)
     ordering=['status','publish']
+
 admin.site.register(Post,PostAdmin)

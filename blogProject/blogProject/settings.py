@@ -120,6 +120,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
 EMAIL_HOST='smtp.gmail.com' #simple mail transfer protocol(server host)
 EMAIL_PORT=587 #default value=25
 EMAIL_HOST_USER='mrwikijhon@gmail.com'

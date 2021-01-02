@@ -6,9 +6,9 @@ Home page
 {% endblock %}
 <body style="background-color: #1b262c;">
     {% block content_block %}
-    <h1>Home Blog Page</h1>
+    <h1 style='color: #f17362;'>Home Blog Page</h1>
     {% for post in post_list %}
-    <a href="{{post.get_absolute_url}}"  style="color:  #ebecf1;"><h2> {{post.title}} </h2></a>
+    <a href="{{post.get_absolute_url}}"  style="color:  #f17362;"><h2> {{post.title}} </h2></a>
     Published on {{post.publish}} by {{post.author|title}}
     {{post.body|truncatewords:40|linebreaks}}
     {% endfor %}
